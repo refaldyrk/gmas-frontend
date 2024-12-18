@@ -251,6 +251,10 @@
     <NavHamburger />
     <NavUl>
         <NavLi href="/">Home</NavLi>
+        {#if localStorage.getItem("")}
+
+        {/if}
+        <NavLi>My Platform</NavLi>
     </NavUl>
 </Navbar>
 

@@ -69,6 +69,9 @@
     <NavHamburger />
     <NavUl>
         <NavLi href="/">Home</NavLi>
+        {#if localStorage.getItem("__id_platforms") !== "" &&localStorage.getItem("__id_platforms") !== null}
+            <NavLi href={`/${localStorage.getItem("__id_platforms")}`}>My Room</NavLi>
+        {/if}
     </NavUl>
 </Navbar>
 
