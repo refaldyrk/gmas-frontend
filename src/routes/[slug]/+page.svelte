@@ -36,6 +36,21 @@
 
     onMount(() => {
         fetchComments();
+        fetch('https://gmas-backend.refaldy.id/', {
+            credentials: 'include',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    alert(`Error: ${response.status}`);
+                    throw new Error('Network response was not ok');
+                }
+
+                return response.json();
+            })
+            .catch(error => {
+                alert("Can't Connect To Server")
+                console.error('There was a problem with the fetch operation:', error);
+            });
     });
 
     async function fetchComments() {
