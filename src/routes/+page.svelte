@@ -8,9 +8,11 @@
     let messsage = '';
     let dexists_platform = false;
     let btn_copy = 'Copy your link'
-    let id = localStorage.getItem("__id_platforms")
+    let ids = '';
     onMount(() => {
+        let id = localStorage.getItem("__id_platforms")
         if (id) {
+            ids = id
             dexists_platform = true
         }
 
@@ -69,8 +71,8 @@
     <NavHamburger />
     <NavUl>
         <NavLi href="/">Home</NavLi>
-        {#if id !== "" && id !== null}
-            <NavLi href={`/${id}`}>My Room</NavLi>
+        {#if ids !== "" && ids !== null}
+            <NavLi href={`/${ids}`}>My Room</NavLi>
         {/if}
     </NavUl>
 </Navbar>

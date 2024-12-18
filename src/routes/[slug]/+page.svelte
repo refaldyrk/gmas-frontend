@@ -33,8 +33,13 @@
     let limit = 10;
     let isLoadingSongs = false;
     let hasMoreSongs = true;
-
+    let ids = '';
     onMount(() => {
+        let id = localStorage.getItem("__id_platforms")
+        if (id) {
+            ids = id
+        }
+
         fetchComments();
         fetch('https://gmas-backend.refaldy.id/', {
             credentials: 'include',
@@ -251,10 +256,9 @@
     <NavHamburger />
     <NavUl>
         <NavLi href="/">Home</NavLi>
-        {#if localStorage.getItem("")}
-
+        {#if ids !== "" && ids !== null}
+            <NavLi href={`/${ids}`}>My Room</NavLi>
         {/if}
-        <NavLi>My Platform</NavLi>
     </NavUl>
 </Navbar>
 
