@@ -41,7 +41,7 @@
         }
 
         fetchComments();
-        fetch('https://gmas-backend.refaldy.id/', {
+        fetch('https://gmas-backend.efal.lol/', {
             credentials: 'include',
         })
             .then(response => {
@@ -64,7 +64,7 @@
         isLoadingComments = true;
 
         try {
-            const response = await fetch(`https://gmas-backend.refaldy.id/comments?page=${commentPage}&limit=${commentLimit}&id=${slug}`, {
+            const response = await fetch(`https://gmas-backend.efal.lol/comments?page=${commentPage}&limit=${commentLimit}&id=${slug}`, {
                 credentials: 'include',
             });
 
@@ -119,7 +119,7 @@
         }
 
         try {
-            const response = await fetch('https://gmas-backend.refaldy.id/comment', {
+            const response = await fetch('https://gmas-backend.efal.lol/comment', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -198,7 +198,7 @@
         hasMoreSongs = true;
 
         try {
-            const response = await fetch(`https://gmas-backend.refaldy.id/search?query=${keyword}&market=ID&limit=${limit}&offset=${offset}`, {
+            const response = await fetch(`https://gmas-backend.efal.lol/search?query=${keyword}&market=ID&limit=${limit}&offset=${offset}`, {
                 credentials: 'include',
             });
 
@@ -227,7 +227,7 @@
         offset += limit;
 
         try {
-            const response = await fetch(`https://gmas-backend.refaldy.id/search?query=${songKeyword}&market=ID&limit=${limit}&offset=${offset}`, {
+            const response = await fetch(`https://gmas-backend.efal.lol/search?query=${songKeyword}&market=ID&limit=${limit}&offset=${offset}`, {
                 credentials: 'include',
             });
 

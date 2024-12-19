@@ -16,7 +16,7 @@
             dexists_platform = true
         }
 
-        fetch('https://gmas-backend.refaldy.id/', {
+        fetch('https://gmas-backend.efal.lol/', {
             credentials: 'include',
         })
             .then(response => {
@@ -35,7 +35,7 @@
 
     async function handleSubmit(event) {
         event.preventDefault();
-        fetch('https://gmas-backend.refaldy.id/platform?name='+name, {
+        fetch('https://gmas-backend.efal.lol/platform?name='+name, {
             credentials: 'include',
         })
             .then(response => {
